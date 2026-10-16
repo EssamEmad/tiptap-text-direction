@@ -137,7 +137,7 @@ function TextDirectionPlugin({ types }: { types: Array<string> }) {
 					if (
 						wrapperDirection === undefined &&
 						node.attrs.dir !== null &&
-						node.textContent.length > 0
+						getTextDirection(node.textContent) !== null
 					) {
 						continue;
 					}
